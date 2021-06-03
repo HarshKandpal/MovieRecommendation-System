@@ -11,7 +11,6 @@ print(df2.head())
 df2.rename(columns={"movie_id": "id"}, inplace=True)
 df3 = pd.merge(df1, df2)
 df3["release_date"] = df3["release_date"].fillna('0000')
-#df3["popularity"] = df3["popularity"].fillna('0000')
 emp = df3["release_date"]
 length = (len(df3["release_date"]))
 year = []

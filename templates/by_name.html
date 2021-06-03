@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+<html>
+    <style>
+          body{
+             background-image:linear-gradient(to bottom right,lightgreen , rgb(90, 162, 190)) ;
+        }
+    </style>
+    <body>
+        {%block body%}
+    <div id="search_movies">
+        <br>
+           <br> 
+           <b>TITLE</b>: {{name1[0]}}
+           <br/>
+           <br/>
+           <b>RUNTIME</b>:{{name1[1]}} min
+           <br/>
+           <br/>
+           <b>HOMEPAGE</b>:<a href="{{name1[2]}}">{{name1[2]}}</a>
+           <br/>
+           <br/>
+           <b>OVERVIEW</b>:{{name1[3]}}
+    </div>
+{%endblock body%}
+    </body>
+</html>

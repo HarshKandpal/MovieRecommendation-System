@@ -32,7 +32,7 @@
                 {% for i in range(0,10) %}
                 <tr>
                 <th scope="row">{{loop.index}}</th>
-                <td>{{top_movies[i]}}</td>
+                <td class="fw-bold">{{top_movies[i]}}</td>
                 <td>{{"%.1f"|format(top_rate[i])}}</td>
                 {% for gen in top_genres[i]  %}
                 <td> {{gen|join(",")}}</td>
@@ -44,19 +44,20 @@
           </table>
           <br/>
           <br>
+          <div class="btn-group" role="group">
           <form action='/gen'>
             <div>
-            <button class="btn btn-outline-dark btn-sm mx-1" style="float:right; font-weight:bold;">By_Genre</button>
+            <button class="btn btn-primary ">By_Genre</button>
           </div>
         </form>
         <br>
         <br>
         <form action='/date'>
             <div>
-            <button class="btn btn-outline-dark btn-sm mx-1" style="float:right; font-weight: bold;" >By_Year </button>
+            <button class="btn btn-dark" >By_Year </button>
             </div>
         </form>
         <br/>
-    </ul>
+      </div>
 {%endblock body%}
   

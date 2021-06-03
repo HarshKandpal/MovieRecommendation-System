@@ -49,7 +49,7 @@
               <th scope="row">{{loop.index}}</th>
               <td>{{movies[i]}}</td>
               <td>{{"%.1f"|format(rate[i])}}</td>
-              <td><a href="/detail/{{movies[i]}}" type="button" class="btn btn-outline-dark btn-sm mx-1">Detail</button></td>
+              <td><a href="/detail/{{movies[i]}}" type="button" class="btn btn-outline-dark btn-sm mx-1" style="font-weight: bold;">Detail</button></td>
               </tr>
             {% endfor %}
           </tbody>

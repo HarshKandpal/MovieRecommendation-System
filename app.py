@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request,redirect
+from flask import Flask,render_template,request
 from mini import _genre_,release_date,_top_,similar,_info_,all_movies
 app = Flask(__name__)
 
@@ -32,6 +32,7 @@ def get_detail(Movie_Name):
 def movie_details():
     name=request.form['Search']
     name1=_info_(name)
-    return render_template('by_name.html' ,name1=name1) 
+    sim,vote=similar(name,0)
+    return render_template('by_name.html' ,name1=name1,sim=sim,vote=vote) 
 if __name__ =='__main__':
     app.run(debug=True)
